@@ -9,7 +9,7 @@ import (
 	"reflect"
 	"time"
 
-	"gopkg.in/vmihailenco/msgpack.v2/codes"
+	"github.com/weixinhost/msgpack/codes"
 )
 
 const bytesAllocLimit = 1024 * 1024 // 1mb

@@ -5,6 +5,12 @@ import (
 	"sync"
 )
 
+var DefaultTagName string = "msgpack"
+
+func SetTag(newTag string) {
+	DefaultTagName = newTag
+}
+
 var errorType = reflect.TypeOf((*error)(nil)).Elem()
 
 var customEncoderType = reflect.TypeOf((*CustomEncoder)(nil)).Elem()
@@ -136,12 +142,10 @@ func (fs *fields) OmitEmpty(strct reflect.Value) []*field {
 func getFields(typ reflect.Type) *fields {
 	numField := typ.NumField()
 	fs := newFields(numField)
-
 	var omitEmpty bool
 	for i := 0; i < numField; i++ {
 		f := typ.Field(i)
-
-		name, opt := parseTag(f.Tag.Get("msgpack"))
+		name, opt := parseTag(f.Tag.Get(DefaultTagName))
 		if name == "-" {
 			continue
 		}

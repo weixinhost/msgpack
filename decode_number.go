@@ -5,7 +5,7 @@ import (
 	"math"
 	"reflect"
 
-	"gopkg.in/vmihailenco/msgpack.v2/codes"
+	"github.com/weixinhost/msgpack/codes"
 )
 
 func (d *Decoder) skipN(n int) error {

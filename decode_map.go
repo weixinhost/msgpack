@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"reflect"
 
-	"gopkg.in/vmihailenco/msgpack.v2/codes"
+	"github.com/weixinhost/msgpack/codes"
 )
 
 var mapStringStringPtrType = reflect.TypeOf((*map[string]string)(nil))

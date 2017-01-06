@@ -11,8 +11,8 @@ import (
 
 	. "gopkg.in/check.v1"
 
-	"gopkg.in/vmihailenco/msgpack.v2"
-	"gopkg.in/vmihailenco/msgpack.v2/codes"
+	"github.com/weixinhost/msgpack"
+	"github.com/weixinhost/msgpack/codes"
 )
 
 type nameStruct struct {

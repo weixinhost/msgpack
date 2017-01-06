@@ -10,7 +10,7 @@ import (
 	"testing"
 	"time"
 
-	"gopkg.in/vmihailenco/msgpack.v2"
+	"github.com/weixinhost/msgpack"
 )
 
 func benchmarkEncodeDecode(b *testing.B, src, dst interface{}) {

@@ -4,7 +4,7 @@ import (
 	"bytes"
 	"fmt"
 
-	"gopkg.in/vmihailenco/msgpack.v2"
+	"github.com/weixinhost/msgpack"
 )
 
 func Example_encodeMapStringString() {
